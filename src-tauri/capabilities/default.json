@@ -1,0 +1,6 @@
+{
+  "identifier": "default",
+  "description": "HID tester window",
+  "windows": ["main"],
+  "permissions": ["core:default", "core:event:default"]
+}

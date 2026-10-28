@@ -1,0 +1,137 @@
+:root {
+  --ink: #d7f6c4;
+  --dim: #6f8a62;
+  --bg: #10140e;
+  --panel: #181e14;
+  --brass: #c4a35a;
+  --hot: #b8ff64;
+  --miss: #3a2418;
+  --line: #2a3324;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(1200px 500px at 50% -10%, #24301c 0%, transparent 55%), var(--bg);
+  color: var(--ink);
+  font-family: 'Copperplate', 'Futura', 'Gill Sans', sans-serif;
+}
+
+.scope {
+  padding: 28px 32px 24px;
+}
+
+.plate {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 12px;
+}
+
+.brand {
+  margin: 0;
+  letter-spacing: 0.22em;
+  font-size: 11px;
+  color: var(--brass);
+}
+
+h1 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+}
+
+h1 span {
+  color: var(--brass);
+}
+
+.logpath {
+  margin: 0 0 0 auto;
+  font-family: Menlo, 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--dim);
+}
+
+.readout {
+  display: grid;
+  grid-template-columns: 2.2fr 0.7fr 1.4fr 0.9fr;
+  gap: 12px;
+  margin: 18px 0 22px;
+}
+
+.readout div {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+}
+
+.lbl {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--brass);
+}
+
+code {
+  font-family: Menlo, 'Courier New', monospace;
+  font-size: 15px;
+  color: var(--hot);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+}
+
+.key {
+  --u: 62px;
+  width: calc(var(--u) * var(--w, 1));
+  height: 46px;
+  border: 1px solid #4a5a3c;
+  background: #1c2418;
+  color: var(--dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.key.probe {
+  outline: 1px dashed var(--brass);
+  outline-offset: 1px;
+}
+
+.key.on {
+  background: var(--hot);
+  color: #13200c;
+  border-color: #e7ffb0;
+  box-shadow: 0 0 12px #b8ff6466;
+}
+
+.tail {
+  margin: 18px 0 0;
+  height: 140px;
+  overflow: auto;
+  background: #0c100b;
+  border: 1px solid var(--line);
+  color: var(--dim);
+  font-family: Menlo, 'Courier New', monospace;
+  font-size: 11px;
+  padding: 10px 12px;
+  white-space: pre-wrap;
+}

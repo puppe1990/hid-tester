@@ -1,0 +1,25 @@
+[package]
+name = "hid-tester"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "hid_tester"
+path = "src/lib.rs"
+
+[[bin]]
+name = "hid-tester"
+path = "src/main.rs"
+
+[features]
+default = ["desktop"]
+desktop = ["dep:tauri", "dep:hidapi"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", optional = true }
+hidapi = { version = "2.6", optional = true }
